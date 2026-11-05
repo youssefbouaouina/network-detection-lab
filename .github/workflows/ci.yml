@@ -54,7 +54,10 @@ jobs:
         run: python generate_pcaps.py
 
       - name: Validate the Suricata ruleset
-        run: suricata -T -S rules/lab.rules -c /etc/suricata/suricata.yaml
+        run: |
+          mkdir -p results/suricata-validation
+          suricata -T -S rules/lab.rules -c /etc/suricata/suricata.yaml \
+            --set default-log-dir="$PWD/results/suricata-validation"
 
       - name: Run the lab
         run: bash scripts/run_lab.sh

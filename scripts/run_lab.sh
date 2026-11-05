@@ -16,6 +16,7 @@ for pcap in pcaps/*.pcap; do
   mkdir -p "results/suricata/$name" "results/zeek/$name"
   echo "== $name =="
   suricata -r "$pcap" -l "results/suricata/$name" -S rules/lab.rules -k none \
+    --set default-log-dir="$ROOT/results/suricata/$name" \
     > "results/suricata/$name/stdout.txt" 2> "results/suricata/$name/stderr.txt" || true
   (
     cd "results/zeek/$name"
