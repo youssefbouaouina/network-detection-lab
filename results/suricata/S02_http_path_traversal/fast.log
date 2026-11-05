@@ -1,0 +1,1 @@
+11/05/2026-03:21:33.219043  [**] [1:1000102:1] LAB HTTP path traversal [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.0.12:41000 -> 10.10.0.1:80

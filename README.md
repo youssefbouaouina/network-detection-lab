@@ -1,5 +1,9 @@
 # network-detection-lab
 
+[![CI](https://github.com/youssefbouaouina/network-detection-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/youssefbouaouina/network-detection-lab/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Python 3.12](https://img.shields.io/badge/python-3.12-blue)
+
 Six network attack scenarios and one benign capture, generated locally as PCAPs, detected by a
 hand-written Suricata ruleset and parsed by Zeek. The recall and false-positive numbers are
 produced by `evaluate.py` from the real tool output.
@@ -42,9 +46,31 @@ flowchart LR
 
 ## Results
 
-See [`results/RESULTS.md`](results/RESULTS.md) and [`results/metrics.json`](results/metrics.json).
-They are generated from the raw Suricata `eve.json` and Zeek logs, both kept in the repository
-after the CI run.
+Run #2 of the CI workflow, 2026-11-05, from [`results/metrics.json`](results/metrics.json):
+
+| Metric | Value |
+|---|---|
+| Scenarios detected | **6/6 (100%)** |
+| Suricata alerts across malicious captures | 6 |
+| Alerts on the benign capture | **0** |
+| Zeek parsed (benign) | 6 connections, 3 HTTP requests, 2 DNS transactions |
+
+| Scenario | Detected | Suricata alerts | Rule |
+|---|---|---|---|
+| 30 TCP SYN probes | yes | 1 | `LAB TCP SYN scan` |
+| HTTP `../` in the URI | yes | 1 | `LAB HTTP path traversal` |
+| HTTP boolean SQL injection | yes | 1 | `LAB HTTP SQL injection` |
+| `sqlmap` User-Agent | yes | 1 | `LAB sqlmap user agent` |
+| DNS query under `exfil.lab` | yes | 1 | `LAB DNS exfiltration query` |
+| 10 connections to port 22 | yes | 1 | `LAB SSH brute force` |
+
+The full per-capture alert log and Zeek `conn.log`/`http.log`/`dns.log` are committed under
+`results/`, so every row above can be traced to a raw event. Suricata 7.0.3 and Zeek 9.0.1
+are the versions recorded in `results/`.
+
+The ruleset under test is the six rules in [`rules/lab.rules`](rules/lab.rules), not ET Open.
+The reason is in **Limitations**: synthetic captures cannot fairly benchmark a community
+ruleset, so the project measures its own rules instead of claiming a score for ET Open.
 
 ## Run
 

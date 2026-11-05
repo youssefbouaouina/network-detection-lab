@@ -1,0 +1,21 @@
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Notice: suricata: This is Suricata version 7.0.3 RELEASE running in USER mode
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Info: cpu: CPUs/cores online: 4
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Info: suricata: Setting engine mode to IDS mode by default
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Info: exception-policy: master exception-policy set to: auto
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Info: logopenfile: fast output device (regular) initialized: fast.log
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Info: logopenfile: stats output device (regular) initialized: stats.log
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Info: detect: 1 rule files processed. 6 rules successfully loaded, 0 rules failed, 0
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Info: detect: 6 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 4 inspect application layer, 0 are decoder event only
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Warning: detect: rule 1000106: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Info: unix-manager: unix socket '/var/run/suricata-command.socket'
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Warning: unix-manager: Unix socket: UNIX socket bind(/var/run/suricata-command.socket) error: Address already in use
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Warning: unix-manager: Unable to create unix command socket
+[4888 - RX#01] 2026-11-05 03:21:35 Info: pcap: Starting file run for pcaps/S99_benign.pcap
+[4888 - RX#01] 2026-11-05 03:21:35 Info: pcap: pcap file pcaps/S99_benign.pcap end of file reached (pcap err code 0)
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Notice: threads: Threads created -> RX: 1 W: 4 FM: 1 FR: 1   Engine started.
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Notice: suricata: Signal Received.  Stopping engine.
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Info: suricata: time elapsed 0.025s
+[4888 - RX#01] 2026-11-05 03:21:35 Notice: pcap: read 1 file, 23 packets, 1976 bytes
+[4887 - Suricata-Main] 2026-11-05 03:21:35 Info: counters: Alerts: 0

@@ -1,0 +1,7 @@
+id,detected,suricata_alerts,matched,zeek_conn,zeek_http,zeek_dns
+S01_tcp_syn_scan,True,1,LAB TCP SYN scan,30,0,0
+S02_http_path_traversal,True,1,LAB HTTP path traversal,1,1,0
+S03_http_sqli,True,1,LAB HTTP SQL injection,1,1,0
+S04_sqlmap_user_agent,True,1,LAB sqlmap user agent,1,1,0
+S05_dns_exfil_query,True,1,LAB DNS exfiltration query,1,0,1
+S06_ssh_bruteforce,True,1,LAB SSH brute force,10,0,0

@@ -1,0 +1,1 @@
+11/05/2026-03:21:33.232765  [**] [1:1000105:1] LAB DNS exfiltration query [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 10.10.0.15:53001 -> 10.10.0.1:53

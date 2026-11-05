@@ -1,0 +1,19 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	conn
+#open	2026-11-05-03-21-35
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents	ip_proto
+#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]	count
+1793848893.236014	C4C9jS2ONCtePgIBP2	10.10.0.16	42000	10.10.0.1	22	tcp	-	-	-	-	S0	T	T	0	S	1	40	0	0	-	6
+1793848893.236522	CamJar2NLNrHLnaNK7	10.10.0.16	42001	10.10.0.1	22	tcp	-	-	-	-	S0	T	T	0	S	1	40	0	0	-	6
+1793848893.236981	Cg9NEQ2YLEwDIdADP1	10.10.0.16	42002	10.10.0.1	22	tcp	-	-	-	-	S0	T	T	0	S	1	40	0	0	-	6
+1793848893.237444	Ckkmv74V7NkbkhBeA3	10.10.0.16	42003	10.10.0.1	22	tcp	-	-	-	-	S0	T	T	0	S	1	40	0	0	-	6
+1793848893.237890	C3EuhH3lQKZTP3O7O8	10.10.0.16	42004	10.10.0.1	22	tcp	-	-	-	-	S0	T	T	0	S	1	40	0	0	-	6
+1793848893.238347	CO4Y12rKnJqXymZ34	10.10.0.16	42005	10.10.0.1	22	tcp	-	-	-	-	S0	T	T	0	S	1	40	0	0	-	6
+1793848893.238789	C102FE1eXG0RsR9JBf	10.10.0.16	42006	10.10.0.1	22	tcp	-	-	-	-	S0	T	T	0	S	1	40	0	0	-	6
+1793848893.239247	CgbbxM5LAYDzKMiKf	10.10.0.16	42007	10.10.0.1	22	tcp	-	-	-	-	S0	T	T	0	S	1	40	0	0	-	6
+1793848893.239689	CX7Jemp1cxqOC6kQ1	10.10.0.16	42008	10.10.0.1	22	tcp	-	-	-	-	S0	T	T	0	S	1	40	0	0	-	6
+1793848893.240126	Cw1Qr33dDKvWarCda9	10.10.0.16	42009	10.10.0.1	22	tcp	-	-	-	-	S0	T	T	0	S	1	40	0	0	-	6
+#close	2026-11-05-03-21-35

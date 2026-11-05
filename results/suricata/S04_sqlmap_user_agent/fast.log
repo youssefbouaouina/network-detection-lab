@@ -1,0 +1,1 @@
+11/05/2026-03:21:33.230709  [**] [1:1000104:1] LAB sqlmap user agent [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.0.14:41002 -> 10.10.0.1:80

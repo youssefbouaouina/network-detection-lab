@@ -1,0 +1,29 @@
+------------------------------------------------------------------------------------
+Date: 11/5/2026 -- 03:21:34 (uptime: 0d, 00h 00m 00s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+decoder.pkts                                  | Total                     | 2
+decoder.bytes                                 | Total                     | 298
+decoder.ipv4                                  | Total                     | 2
+decoder.ethernet                              | Total                     | 2
+decoder.udp                                   | Total                     | 2
+decoder.avg_pkt_size                          | Total                     | 149
+decoder.max_pkt_size                          | Total                     | 184
+flow.total                                    | Total                     | 1
+flow.udp                                      | Total                     | 1
+flow.wrk.spare_sync_avg                       | Total                     | 100
+flow.wrk.spare_sync                           | Total                     | 1
+detect.alert                                  | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 1
+app_layer.tx.dns_udp                          | Total                     | 2
+flow.end.state.established                    | Total                     | 1
+flow.mgr.rows_per_sec                         | Total                     | 6553
+flow.spare                                    | Total                     | 9900
+memcap_pressure                               | Total                     | 5
+memcap_pressure_max                           | Total                     | 5
+flow.recycler.recycled                        | Total                     | 1
+flow.recycler.queue_max                       | Total                     | 1
+tcp.memuse                                    | Total                     | 2424832
+tcp.reassembly_memuse                         | Total                     | 458752
+flow.memuse                                   | Total                     | 7154304

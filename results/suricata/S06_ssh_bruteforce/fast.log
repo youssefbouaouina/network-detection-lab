@@ -1,0 +1,1 @@
+11/05/2026-03:21:33.237890  [**] [1:1000106:1] LAB SSH brute force [**] [Classification: Attempted Denial of Service] [Priority: 2] {TCP} 10.10.0.16:42004 -> 10.10.0.1:22

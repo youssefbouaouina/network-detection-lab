@@ -1,0 +1,118 @@
+{
+  "generated_at": "2026-11-05T03:21:35+00:00",
+  "scenarios_total": 6,
+  "detected": 6,
+  "recall": 1.0,
+  "alerts_total": 6,
+  "benign_alerts": 0,
+  "benign_signatures": [],
+  "benign_zeek": {
+    "conn.log": 6,
+    "http.log": 3,
+    "dns.log": 2
+  },
+  "per_scenario": [
+    {
+      "id": "S01_tcp_syn_scan",
+      "title": "30 TCP SYN probes from one source in a few seconds",
+      "detected": true,
+      "alerts": 1,
+      "matched": [
+        "LAB TCP SYN scan"
+      ],
+      "signatures": [
+        "LAB TCP SYN scan"
+      ],
+      "zeek": {
+        "conn.log": 30,
+        "http.log": 0,
+        "dns.log": 0
+      }
+    },
+    {
+      "id": "S02_http_path_traversal",
+      "title": "HTTP GET with ../ in the URI",
+      "detected": true,
+      "alerts": 1,
+      "matched": [
+        "LAB HTTP path traversal"
+      ],
+      "signatures": [
+        "LAB HTTP path traversal"
+      ],
+      "zeek": {
+        "conn.log": 1,
+        "http.log": 1,
+        "dns.log": 0
+      }
+    },
+    {
+      "id": "S03_http_sqli",
+      "title": "HTTP GET with a boolean SQL injection in the query string",
+      "detected": true,
+      "alerts": 1,
+      "matched": [
+        "LAB HTTP SQL injection"
+      ],
+      "signatures": [
+        "LAB HTTP SQL injection"
+      ],
+      "zeek": {
+        "conn.log": 1,
+        "http.log": 1,
+        "dns.log": 0
+      }
+    },
+    {
+      "id": "S04_sqlmap_user_agent",
+      "title": "HTTP request with a sqlmap User-Agent",
+      "detected": true,
+      "alerts": 1,
+      "matched": [
+        "LAB sqlmap user agent"
+      ],
+      "signatures": [
+        "LAB sqlmap user agent"
+      ],
+      "zeek": {
+        "conn.log": 1,
+        "http.log": 1,
+        "dns.log": 0
+      }
+    },
+    {
+      "id": "S05_dns_exfil_query",
+      "title": "DNS query for a long encoded label under exfil.lab",
+      "detected": true,
+      "alerts": 1,
+      "matched": [
+        "LAB DNS exfiltration query"
+      ],
+      "signatures": [
+        "LAB DNS exfiltration query"
+      ],
+      "zeek": {
+        "conn.log": 1,
+        "http.log": 0,
+        "dns.log": 1
+      }
+    },
+    {
+      "id": "S06_ssh_bruteforce",
+      "title": "10 TCP connections to port 22 from one source in a few seconds",
+      "detected": true,
+      "alerts": 1,
+      "matched": [
+        "LAB SSH brute force"
+      ],
+      "signatures": [
+        "LAB SSH brute force"
+      ],
+      "zeek": {
+        "conn.log": 10,
+        "http.log": 0,
+        "dns.log": 0
+      }
+    }
+  ]
+}
