@@ -1,0 +1,9 @@
+# Rules written for this lab. They are loaded as the only rule file in CI
+# (`suricata -S rules/lab.rules`), so a detection here is attributable.
+
+alert tcp any any -> any any (msg:"LAB TCP SYN scan"; flags:S; threshold: type both, track by_src, count 20, seconds 5; classtype:attempted-recon; sid:1000101; rev:1;)
+alert http any any -> any any (msg:"LAB HTTP path traversal"; flow:established,to_server; http.uri; content:"../"; nocase; classtype:web-application-attack; sid:1000102; rev:1;)
+alert http any any -> any any (msg:"LAB HTTP SQL injection"; flow:established,to_server; http.uri; content:"OR'1'='1"; nocase; classtype:web-application-attack; sid:1000103; rev:1;)
+alert http any any -> any any (msg:"LAB sqlmap user agent"; flow:established,to_server; http.user_agent; content:"sqlmap"; nocase; classtype:web-application-attack; sid:1000104; rev:1;)
+alert dns any any -> any any (msg:"LAB DNS exfiltration query"; dns.query; content:".exfil.lab"; nocase; classtype:bad-unknown; sid:1000105; rev:1;)
+alert tcp any any -> any 22 (msg:"LAB SSH brute force"; flags:S; threshold: type both, track by_src, count 8, seconds 10; classtype:attempted-dos; sid:1000106; rev:1;)
